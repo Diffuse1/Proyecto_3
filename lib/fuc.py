@@ -20,5 +20,10 @@ for i in range(df.shape[0]):
     for j in range(df.shape[1]):
         destino = df.columns[j]
         peso = df.iloc[i, j]
-        if pd.notna(peso):
+        if pd.notna(peso) and peso != 0:
             aristas.append((origen, destino, peso))
+
+            
+cadena = ""
+for arista in aristas:
+    cadena += f"[{arista[0]}] -> [{arista[1]}] : Peso [{arista[2]}], "
