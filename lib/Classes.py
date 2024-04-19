@@ -23,7 +23,6 @@ class grafo:
         vertices_no_visitados = list(self.Aristas.keys())
 
         while vertices_no_visitados:
-            # Encontrar el vértice con la etiqueta mínima
             min_etiqueta = float('inf')
             min_vertice = None
             for v in vertices_no_visitados:
@@ -36,7 +35,6 @@ class grafo:
 
             vertices_no_visitados.remove(min_vertice)
 
-            # Actualizar las etiquetas de los vecinos
             for vecino, peso_vecino in self.Aristas[min_vertice].items():
                 etiqueta_nueva = etiquetas[min_vertice] + peso_vecino
                 if etiqueta_nueva < etiquetas[vecino]:

@@ -25,5 +25,6 @@ for i in range(df.shape[0]):
 
             
 cadena = ""
-for arista in aristas:
-    cadena += f"[{arista[0]}] -> [{arista[1]}] : Peso [{arista[2]}], "
+for arista in aristas :
+    cadena += f"[{arista[0]}] -> [{arista[1]}] : Peso [{arista[2]}], \n "
+    
